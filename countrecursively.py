@@ -20,6 +20,17 @@ def count_recursively(lst):
         return 1 + count_recursively(lst[:-1])
 
 
+# def count_recursively(lst):
+#     """Return number of items in a list, using recursion."""
+
+#     # START SOLUTION
+
+#     if not lst:
+#         return 0
+
+#     return 1 + count_recursively(lst[1:])
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:

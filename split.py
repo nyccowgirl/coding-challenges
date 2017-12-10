@@ -51,6 +51,31 @@ def split(astring, splitter):
     # version without .find(), include another vairable to track index
 
 
+# def split(astring, splitter):
+#     """Split astring by splitter and return list of splits."""
+
+#     # START SOLUTION
+
+#     out = []
+#     index = 0
+
+#     while index <= len(astring):
+
+#         curr_index = index
+#         index = astring.find(splitter, index)
+
+#         if index != -1:
+#             out.append(astring[curr_index:index])
+#             index += len(splitter)
+
+#         else:
+#             # couldn't find any more instances of splitter in astring
+#             out.append(astring[curr_index:])
+#             break
+
+#     return out
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
