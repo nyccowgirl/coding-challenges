@@ -21,6 +21,8 @@ def missing_number(nums, max_num):
             return i + 1
 
 
+#SOLUTION FILE:
+
 # def missing_number_scan(nums, max_num):
 #     """Given a list of numbers 1...max_num, find which one is missing.
 
@@ -96,6 +98,7 @@ def missing_number(nums, max_num):
 #     return expected - sum(nums)
 
 # This solution is O(n) and requires no additional lists.
+
 
 if __name__ == '__main__':
     import doctest

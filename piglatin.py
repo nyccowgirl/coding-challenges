@@ -40,7 +40,9 @@ def pig_latin(phrase):
     return " ".join(igpay_atinlay)
 
 
-    # A helper function:
+# SOLUTION FILE:
+
+# A helper function:
 
 # def pig_latin_word(word):
 #     """Turn a word into the pig latin version.

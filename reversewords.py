@@ -46,6 +46,8 @@ def rev(s):
     return new_s
 
 
+# SOLUTION FILE:XS
+
 # def rev(s):
 #     """Reverse word-order in string, preserving spaces."""
 

@@ -20,6 +20,8 @@ def count_recursively(lst):
         return 1 + count_recursively(lst[:-1])
 
 
+# SOLUTION FILE:
+
 # def count_recursively(lst):
 #     """Return number of items in a list, using recursion."""
 

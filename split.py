@@ -48,8 +48,10 @@ def split(astring, splitter):
 
     return lst
 
-    # version without .find(), include another vairable to track index
+    # version without .find(), include another variable to track index
 
+
+# SOLUTION FILE:
 
 # def split(astring, splitter):
 #     """Split astring by splitter and return list of splits."""

@@ -49,6 +49,8 @@ def is_anagram_of_palindrome(word):
     # x = Counter('word') -> would automatically do the count dictionary
 
 
+# SOLUTION FILE:
+
 # def is_anagram_of_palindrome(word):
 #     """Is the word an anagram of a palindrome?"""
 

@@ -37,6 +37,8 @@ def furthest(num_holes, cafes):
     return max(dist_lst)
 
 
+# SOLUTION FILE:
+
 # def furthest(num_holes, cafes):
 #     """Find longest distance between a hole and a cafe."""
 

@@ -40,6 +40,8 @@ def decode(s):
     return ''.join(decode_msg)
 
 
+# SOLUTION FILE:
+
 # def decode(s):
 #     """Decode a string."""
 

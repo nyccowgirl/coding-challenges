@@ -49,6 +49,8 @@ def lemur(branches):
     return count
 
 
+# SOLUTION FILE:
+
 # def  lemur(branches):
 #     """Return number of jumps needed."""
 

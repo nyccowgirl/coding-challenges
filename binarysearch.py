@@ -25,7 +25,7 @@ of 1-100, this should never be more than 7.
 def binary_search(val):
     """Using binary search, find val in range 1-100. Return # of guesses."""
 
-    assert 0 < val < 101, "Val must be between 1-100"
+    assert 0 < val < 101, 'Val must be between 1-100'
 
     num_guesses = 0
 
@@ -45,6 +45,8 @@ def binary_search(val):
 
     return num_guesses
 
+
+# SOLUTION FILE:
 
 # def binary_search(val):
 #     """Using binary search, find val in range 1-100. Return # of guesses."""
