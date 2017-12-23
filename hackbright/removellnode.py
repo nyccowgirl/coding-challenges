@@ -61,6 +61,15 @@ def remove_node(node):
     Does not return anything; changes list in place.
     """
 
+    if not node.next:
+        raise ValueError('tail node cannot be removed')
+
+    node.data = node.next.data
+    node.next = node.next.next
+
+    # run time is O(1) since node is given and linked list does not have to be
+    # traversed
+
 
 if __name__ == '__main__':
     import doctest
