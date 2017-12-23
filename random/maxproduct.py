@@ -46,6 +46,38 @@ def max_product(lst):
     return max_product
 
 
+# ALTERNATIVE SOLUTION:
+
+# def max_product(lst):
+
+#     if len(lst) < 3:
+#         raise ValueError('list does not have 3 numbers')
+#     elif len(lst) == 3:
+#         max_product = lst[0] * lst[1] * lst[2]
+#     else:
+#         # Do not need to remove last items (e.g., max_three or min_two) as it
+#         # would result in error in situation where list has 4 numbers only.
+#         max_one = max(lst)
+#         lst.remove(max_one)
+#         max_two = max(lst)
+#         lst.remove(max_two)
+#         max_three = max(lst)
+
+#         min_one = min(lst)
+#         lst.remove(min_one)
+#         min_two = min(lst)
+
+#         a = max_one * max_two * max_three
+#         b = min_one * min_two * max_one
+
+#         if a > b:
+#             max_product = a
+#         else:
+#             max_product = b
+
+#     return max_product
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
