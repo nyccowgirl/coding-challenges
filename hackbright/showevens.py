@@ -25,6 +25,21 @@ def show_evens(nums):
 
     return indices
 
+# ALTERNATE SOLUTION:
+
+# def show_evens(nums):
+#     """Given list of ints, return list of *indices* of even numbers in list."""
+
+#     # START SOLUTION
+
+#     out = []
+
+#     for i in range(len(nums)):
+#         if nums[i] % 2 == 0:
+#             out.append(i)
+
+#     return out
+
 
 if __name__ == '__main__':
     import doctest
