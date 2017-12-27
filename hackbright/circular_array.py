@@ -116,9 +116,9 @@ class CircularArray(object):
 
         remainder = abs(increment) % length
 
-        if increment > 0:
+        if increment < 0:
             self.dict = {(k + remainder - length if k + remainder >= length else k + remainder): v for (k, v) in self.dict.items()}
-        elif increment < 0:
+        elif increment > 0:
             self.dict = {(k - remainder + length if k - remainder < 0 else k - remainder): v for (k, v) in self.dict.items()}
 
     def print_array(self):
@@ -130,6 +130,7 @@ class CircularArray(object):
             print self.dict[i]
 
 # Have message out to HB as the doctests seem to be opposite of instructions.
+# If opposite, then switch if/elif increment sign compared to 0. Currently switched.
 
 # SOLUTION FILE:
 
