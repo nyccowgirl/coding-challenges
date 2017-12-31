@@ -28,10 +28,16 @@ def modify_str(astring, idx):
     while astring[idx] == new_ch:
         new_ch = random.choice(alpha)
 
-    alist = list(astring)
-    alist[idx] = new_ch
+    # option 1 (seemsto be slower)
+    # alist = list(astring)
+    # alist[idx] = new_ch
 
-    return ''.join(alist)
+    # return ''.join(alist)
+
+    # option 2
+    astring = astring[:idx] + new_ch + astring[(idx + 1):]
+
+    return astring
 
 
 def score_str(astring, goal):
