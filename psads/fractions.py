@@ -50,10 +50,10 @@ class Fraction:
 
         print self.num + '/' + self.den
 
-    def __add__(self, otherfraction):
-        newnum = ((self.num * otherfraction.den) +
-                  (self.den * otherfraction.num))
-        newden = self.den * otherfraction.den
+    def __add__(self, other):
+        newnum = ((self.num * other.den) +
+                  (self.den * other.num))
+        newden = self.den * other.den
 
         common = gcd(newnum, newden)
 
@@ -65,10 +65,10 @@ class Fraction:
 
         return firstnum == secondnum
 
-    def __sub__(self, otherfraction):
-        newnum = ((self.num * otherfraction.den) -
-                  (self.den * otherfraction.num))
-        newden = self.den * otherfraction.den
+    def __sub__(self, other):
+        newnum = ((self.num * other.den) -
+                  (self.den * other.num))
+        newden = self.den * other.den
 
         common = gcd(newnum, newden)
 
