@@ -141,6 +141,88 @@ class NorGate(OrGate):
             return 1
 
 
+class XorGate(BinaryGate):
+    """Creates XOR gates"""
+
+    def __init__(self, n):
+        """Inherits two input lines from BinaryGate subclass."""
+
+        super(XorGate, self).__init__(self, n)
+        # BinaryGate.__init__(self, n)
+
+    def performGateLogic(self):
+        """Returns value of 0 if both input lines have value of 0 (or 1);
+        otherwise, returns 1."""
+
+        a = self.getPinA()
+        b = self.getPinB()
+
+        if (a == 1) and (b == 1):
+            return 0
+        elif (a == 0) and (b == 0):
+            return 0
+        else:
+            return 1
+
+class HalfAdder(XorGate):
+    """Creates half adder."""
+
+    def __init__(self, n):
+        """Inherits two input lines from XorGate subclass and has output of
+        sum bit and carryout bit."""
+
+        super(HalfAdder, self).__init__(self, n)
+        self.sum = super().performGateLogic()
+        self.carry = None
+
+    def performGateLogic(self):
+        """Returns value of 1 if both input lines have value of 1."""
+
+        a = self.getPinA()
+        b = self.getPinB()
+
+        if (a == 1) and (b == 1):
+            self.carry = 1
+        else:
+            self.carry = 0
+
+
+class FullAdder(HalfAdder):
+    """Creates full adder."""
+
+    def __init__(self, n):
+        """Inherits two input lines and carry bit from HalfAdder subclass."""
+
+        super(FullAdder, self).__init__(self, n)
+        self.carry = super().performGateLogic()
+
+    def performGateLogic(self):
+        """Adds carry in value to sum and returns value of 1 if both input lines
+        have value of 1."""
+
+        a = self.getPinA()
+        b = self.getPinB()
+
+        if (XorGate(self).performGateLogic() == 0) and (self.carry == 0):
+            self.sum = 0
+            self.carry = 0
+        elif (XorGate(self).performGateLogic() + self.carry == 1):
+            self.sum = 1
+            self.carry = 0
+        elif (XorGate(self).performGateLogic() + self.carry == 2):
+            self.sum = 0
+            self.carry = 1
+        elif HalfAdder(self).performGateLogic() == 1:
+            if self.carry == 0:
+                self.sum = 0
+                self.carry = 1
+            else:
+                self.sum = 1
+                self.carry = 1
+
+# TO DO: check full adder class and create 8 bit full adder using full adder class.
+
+
 class UnaryGate(LogicGate):
     """Creates logic gate with single input line/pin."""
 
