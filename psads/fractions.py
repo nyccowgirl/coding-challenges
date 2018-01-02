@@ -46,9 +46,9 @@ class Fraction:
         """Instantiates fraction with numerator and denominator."""
 
         # Raises error if either top or bottom are not integers
-        if not top.is_integer():
+        if not isinstance(top, int):
             raise TypeError('numerator must be an integer')
-        elif not bottom.is_integer():
+        elif not isinstance(bottom, int):
             raise TypeError('denominator must be an integer')
 
         # Converts fraction appropriately if denominator is negative integer so
