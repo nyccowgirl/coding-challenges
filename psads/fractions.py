@@ -167,7 +167,7 @@ class Fraction:
 
         return firstnum > secondnum
 
-     def __ge__(self, other):
+    def __ge__(self, other):
         """Validates if first fraction is greater than or equal to second one."""
 
         firstnum = self.num * other.den

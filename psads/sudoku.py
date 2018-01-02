@@ -76,61 +76,44 @@ def draw_board(board):
         ---|---|---||---|---|---||---|---|---
         8,0|8,1|8,2||8,3|8,4|8,5||8,6|8,7|8,8
     """
-    s = '|'
-    ds = '||'
-    dp = '++'
+    s = ' | '
+    ds = ' || '
 
-    print (board[0][0] + s + board[0][1] + s + board[0][2] + ds +
-           board[0][3] + s + board[0][4] + s + board[0][5] + ds +
-           board[0][6] + s + board[0][7] + s + board[0][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[1][0] + s + board[1][1] + s + board[1][2] + ds +
-           board[1][3] + s + board[1][4] + s + board[1][5] + ds +
-           board[1][6] + s + board[1][7] + s + board[1][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[2][0] + s + board[2][1] + s + board[2][2] + ds +
-           board[2][3] + s + board[2][4] + s + board[2][5] + ds +
-           board[2][6] + s + board[2][7] + s + board[2][8])
-    print ('===' + s + '===' + s + '===' + dp +
-           '===' + s + '===' + s + '===' + dp +
-           '===' + s + '===' + s + '===')
-    print (board[3][0] + s + board[3][1] + s + board[3][2] + ds +
-           board[3][3] + s + board[3][4] + s + board[3][5] + ds +
-           board[3][6] + s + board[3][7] + s + board[3][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[4][0] + s + board[4][1] + s + board[4][2] + ds +
-           board[4][3] + s + board[4][4] + s + board[4][5] + ds +
-           board[4][6] + s + board[4][7] + s + board[4][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[5][0] + s + board[5][1] + s + board[5][2] + ds +
-           board[5][3] + s + board[5][4] + s + board[5][5] + ds +
-           board[5][6] + s + board[5][7] + s + board[5][8])
-    print ('===' + s + '===' + s + '===' + dp +
-           '===' + s + '===' + s + '===' + dp +
-           '===' + s + '===' + s + '===')
-    print (board[6][0] + s + board[6][1] + s + board[6][2] + ds +
-           board[6][3] + s + board[6][4] + s + board[6][5] + ds +
-           board[6][6] + s + board[6][7] + s + board[6][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[7][0] + s + board[7][1] + s + board[7][2] + ds +
-           board[7][3] + s + board[7][4] + s + board[7][5] + ds +
-           board[7][6] + s + board[7][7] + s + board[7][8])
-    print ('---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---' + ds +
-           '---' + s + '---' + s + '---')
-    print (board[8][0] + s + board[8][1] + s + board[8][2] + ds +
-           board[8][3] + s + board[8][4] + s + board[8][5] + ds +
-           board[8][6] + s + board[8][7] + s + board[8][8])
+    print (' ' + str(board[0][0]) + s + str(board[0][1]) + s + str(board[0][2]) +
+           ds + str(board[0][3]) + s + str(board[0][4]) + s + str(board[0][5]) +
+           ds + str(board[0][6]) + s + str(board[0][7]) + s + str(board[0][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[1][0]) + s + str(board[1][1]) + s + str(board[1][2]) +
+           ds + str(board[1][3]) + s + str(board[1][4]) + s + str(board[1][5]) +
+           ds + str(board[1][6]) + s + str(board[1][7]) + s + str(board[1][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[2][0]) + s + str(board[2][1]) + s + str(board[2][2]) +
+           ds + str(board[2][3]) + s + str(board[2][4]) + s + str(board[2][5]) +
+           ds + str(board[2][6]) + s + str(board[2][7]) + s + str(board[2][8]))
+    print '===|===|===++===|===|===++===|===|==='
+    print (' ' + str(board[3][0]) + s + str(board[3][1]) + s + str(board[3][2]) +
+           ds + str(board[3][3]) + s + str(board[3][4]) + s + str(board[3][5]) +
+           ds + str(board[3][6]) + s + str(board[3][7]) + s + str(board[3][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[4][0]) + s + str(board[4][1]) + s + str(board[4][2]) +
+           ds + str(board[4][3]) + s + str(board[4][4]) + s + str(board[4][5]) +
+           ds + str(board[4][6]) + s + str(board[4][7]) + s + str(board[4][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[5][0]) + s + str(board[5][1]) + s + str(board[5][2]) +
+           ds + str(board[5][3]) + s + str(board[5][4]) + s + str(board[5][5]) +
+           ds + str(board[5][6]) + s + str(board[5][7]) + s + str(board[5][8]))
+    print '===|===|===++===|===|===++===|===|==='
+    print (' ' + str(board[6][0]) + s + str(board[6][1]) + s + str(board[6][2]) +
+           ds + str(board[6][3]) + s + str(board[6][4]) + s + str(board[6][5]) +
+           ds + str(board[6][6]) + s + str(board[6][7]) + s + str(board[6][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[7][0]) + s + str(board[7][1]) + s + str(board[7][2]) +
+           ds + str(board[7][3]) + s + str(board[7][4]) + s + str(board[7][5]) +
+           ds + str(board[7][6]) + s + str(board[7][7]) + s + str(board[7][8]))
+    print '---|---|---||---|---|---||---|---|---'
+    print (' ' + str(board[8][0]) + s + str(board[8][1]) + s + str(board[8][2]) +
+           ds + str(board[8][3]) + s + str(board[8][4]) + s + str(board[8][5]) +
+           ds + str(board[8][6]) + s + str(board[8][7]) + s + str(board[8][8]))
 
 
 def input_board():
@@ -145,25 +128,84 @@ def input_board():
     while True:
         board = []
 
+        while True:
+            # Give user option to input by row or cell
+            option = raw_input('Would you like to input by row(R) or by cell(C)? ')
+
+            option = option.upper()
+
+            if option not in ['R', 'C']:
+                print 'Please input R or C!'
+            else:
+                break
+
+        if option == 'R':
+            print ('\nInput values of row as series of 9 numbers with 0 for '
+                   'empty positions.\n')
+
+        # Completes rest of board as 0 if user quits
+        quit = False
+
         for x in range(len(row)):
             temp = []
-            for y in range(len(coll)):
 
-                #
-                while True:
-                    num = raw_input('Value at ' + row[x] + coll[y] + ' : ')
+            if option == 'R':
 
-                    # Validates that input is integer between 1- 9
-                    if num.upper() == 'Q':
-                        break
-                    elif not isinstance(int(num), int):
-                        print 'input is not a number'
-                    elif (int(num) < 0) or (int(num) > 9):
-                        print 'input is not between 0 and 9'
-                    elif (int(num) != 0) and (int(num) in temp):
-                        print 'number has already been inputted for the row'
+                if quit:
+                    temp = [0] * 9
+                else:
 
-                temp.append(int(num))
+                    # Acounts for edge cases of input
+                    while True:
+                        series = raw_input('Values at row ' + row[x] + ' : ')
+
+                        if series.upper() == 'Q':
+                            quit = True
+                            break
+                        if not series.isdigit():
+                            print 'input are not numbers'
+                        elif len(series) != 9:
+                            print 'input does not contain 9 numbers'
+                        else:
+
+                            series = [int(s) for s in list(series)]
+
+                            # FIXME: Is it possible to check for dupes other than 0
+                            # without significantly increasing runtime?
+
+                            temp.extend(series)
+                            break
+                    if quit:
+                        temp = [0] * 9
+
+            else:
+                for y in range(len(coll)):
+
+                    if quit:
+                        temp.append(0)
+                    else:
+                        # Accounts for edge cases of input
+                        while True:
+                            num = raw_input('Value at ' + row[x] + coll[y] + ' : ')
+
+                            # Validates that input is integer between 1- 9
+                            if num.upper() == 'Q':
+                                quit = True
+                                break
+                            elif not isinstance(int(num), int):
+                                print 'input is not a number'
+                            elif (int(num) < 0) or (int(num) > 9):
+                                print 'input is not between 0 and 9'
+                            elif (int(num) != 0) and (int(num) in temp):
+                                print 'number has already been inputted for the row'
+                            else:
+                                temp.append(int(num))
+                                break
+
+                        if quit:
+                            temp.append(0)
+                            break
+
             board.append(temp)
 
         print '\nThe puzzle that was inputted is:\n'
@@ -191,6 +233,11 @@ def find_next(board, ridx, cidx):
 
     for x in range(ridx, 9):
         for y in range(cidx, 9):
+            if board[x][y] == 0:
+                return x, y
+
+    for x in range(0, 9):
+        for y in range(0, 9):
             if board[x][y] == 0:
                 return x, y
 
@@ -276,6 +323,7 @@ def execute_repl():
         if not solution:
             print 'No viable solution'
         else:
+            print '\nHere is your solution: \n'
             draw_board(puzzle)
 
         if not play_again():
@@ -287,3 +335,11 @@ def execute_repl():
 if __name__ == '__main__':
 
     execute_repl()
+
+# TO TEST:
+#
+# >>> input = [[5,1,7,6,0,0,0,3,4],[2,8,9,0,0,4,0,0,0],[3,4,6,2,0,5,0,9,0],[6,0,2,0,0,0,0,1,0],[0,3,8,0,0,6,0,4,7],[0,0,0,0,0,0,0,0,0],[0,9,0,0,0,0,0,7,8],[7,0,3,4,0,0,5,6,0],[0,0,0,0,0,0,0,0,0]]
+# >>> solveSudoku(input)
+# True
+# >>> input
+# [[5, 1, 7, 6, 9, 8, 2, 3, 4], [2, 8, 9, 1, 3, 4, 7, 5, 6], [3, 4, 6, 2, 7, 5, 8, 9, 1], [6, 7, 2, 8, 4, 9, 3, 1, 5], [1, 3, 8, 5, 2, 6, 9, 4, 7], [9, 5, 4, 7, 1, 3, 6, 8, 2], [4, 9, 5, 3, 6, 2, 1, 7, 8], [7, 2, 3, 4, 8, 1, 5, 6, 9], [8, 6, 1, 9, 5, 7, 4, 2, 3]]
