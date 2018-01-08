@@ -67,6 +67,9 @@ def coins(num_coins):
 #     def adj_coins(num, result=0, change):
 #         """Calculates total result based on recursion."""
 
+        # print ('add_coins was called with num_coins_remaining={},
+        #        total_so_far={}, results_set={}'.format(left, total, results))
+
 #         if num == 0:
 #             change.add(result)
 #         else:
@@ -107,6 +110,7 @@ def coins(num_coins):
 #     # For each, we'll have 1 fewer coin to add afterwards, so left -= 1
 #     add_coins(left - 1, total + DIME, results)
 #     add_coins(left - 1, total + PENNY, results)
+
 # This is called by coins:
 
 # coins.py
@@ -123,6 +127,7 @@ def coins(num_coins):
 #     add_coins(left=num_coins, total=0, results=results)
 
 #     return results
+
 # Non-Recursive Solution
 # There’s an easier way, though.
 
