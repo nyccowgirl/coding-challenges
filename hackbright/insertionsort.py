@@ -33,13 +33,39 @@ def insertion_sort(alist):
 
             while j >= 0 and alist[j] > x:
                 alist[j + 1] = alist[j]
-                j = j - 1
+                j -= 1
 
             alist[j + 1] = x
 
         return alist
 
     return insert_rec(alist, i)
+
+
+# SOLUTION FILE:
+
+# def insertion_sort(alist):
+#     """Given a list, sort it using insertion sort."""
+
+#     # START SOLUTION
+
+#     for i in range(1, len(alist)):
+#         # For each item in the list, starting at the second, find out
+#         # how far to the left it goes--as soon as we find a number
+#         # smaller than it, we've gone far enough back
+
+#         j = i - 1
+#         while j >= 0 and alist[j] > alist[i]:
+#             j -= 1
+#         j += 1
+
+#         # now j in the position where we should move i to, and we should
+#         # put everything over to the right after that
+
+#         if j != i:
+#             alist[j:i + 1] = alist[i:i + 1] + alist[j:i]
+
+#     return alist
 
 
 if __name__ == '__main__':
