@@ -41,6 +41,28 @@ def products_all_nums_but_current(lst):
     return prod_lst
 
 
+#  ALTERNATE SOLUTION:
+# def products_all_nums_but_current(lst):
+#     """Linear runtime"""
+
+#     if len(lst) <= 1:
+#         return lst
+
+#     prod = [1] * len(lst)
+#     n = len(prod)
+
+#     back = 1
+#     for i in range(0, n):
+#         prod[i] = prod[i] * back
+#         back = back * lst[i]
+
+#     front = 1
+#     for i in range(n - 1, -1, -1):
+#         prod[i] = prod[i] * front
+#         front = front * lst[i]
+
+#     return prod
+
 ################################################################################
 
 if __name__ == '__main__':
