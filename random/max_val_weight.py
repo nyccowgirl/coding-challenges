@@ -29,11 +29,10 @@ def max_duffel_bag_value(cake_tuples, capacity):
 
     val_weight = []
 
-    for i in cake_tuples:
-        val_weight[i] = (i, (cake_tuples[i][1] / cake_tuples[i][0]))
+    for i in range(len(cake_tuples)):
+        val_weight.append((i, (float(cake_tuples[i][1]) / cake_tuples[i][0])))
 
-    # max_idx = val_weight.index(max(val_weight))
-    sorted(val_weight, key=lambda x: x[1])
+    val_weight.sort(key=lambda x: x[1], reverse=True)
 
     weight = 0
     value = 0
