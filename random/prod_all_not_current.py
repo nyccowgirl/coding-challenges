@@ -48,20 +48,26 @@ def products_all_nums_but_current(lst):
 #     if len(lst) <= 1:
 #         return lst
 
+#     # Create list with items with length of original list
 #     prod = [1] * len(lst)
 #     n = len(prod)
 
+#     # For each integer, calculate product of all integers before it
 #     back = 1
 #     for i in range(0, n):
 #         prod[i] = prod[i] * back
 #         back = back * lst[i]
 
+#     # For each integer, multiply product of all integers after it to existing
+#     # calculation in order to determine product of all integers in list except
+#     # for current integer
 #     front = 1
 #     for i in range(n - 1, -1, -1):
 #         prod[i] = prod[i] * front
 #         front = front * lst[i]
 
 #     return prod
+
 
 ################################################################################
 
