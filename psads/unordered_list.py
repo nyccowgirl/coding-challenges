@@ -37,15 +37,20 @@ class UnorderedList:
         self.head = None
 
     def isEmpty(self):
+        """Checks if list is empty."""
 
         return self.head is None
 
     def add(self, item):
+        """Adds node to beginning of list."""
+
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
 
     def size(self):
+        """Calculates size of list."""
+
         current = self.head
         count = 0
         while current is not None:
@@ -55,6 +60,8 @@ class UnorderedList:
         return count
 
     def search(self, item):
+        """Searches list for specified item."""
+
         current = self.head
         found = False
         while current is not None and not found:
@@ -66,6 +73,8 @@ class UnorderedList:
         return found
 
     def remove(self, item):
+        """Removes specified item from list and relinks list."""
+
         current = self.head
         previous = None
         found = False
@@ -82,6 +91,8 @@ class UnorderedList:
             previous.setNext(current.getNext())
 
     def append(self, item):
+        """Adds item to end of list."""
+
         current = self.head
 
         while current.next is not None:
@@ -100,6 +111,7 @@ class UnorderedList:
     #     self.tail = None
 
     # def add(self, item):
+
     #     temp = Node(item)
 
     #     if self.isEmpty:
@@ -109,6 +121,7 @@ class UnorderedList:
     #     self.head = temp
 
     # def append(self, item):
+
     #     temp = Node(item)
     #     if self.isEmpty:
     #         self.head = temp
