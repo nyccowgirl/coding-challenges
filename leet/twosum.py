@@ -38,11 +38,11 @@ class Solution:
                 if (num1 + num2 == target):
                     return [i, j]
         
-#         using hash
+#         using dict
         
-#         hash = {}
+#         seen = {}
         
 #         for i, num in enumerate(nums):
-#             if (target - num in hash):
-#                 return [hash[target - num], i]
-#             hash[num] = i
+#             if (target - num) in seen:
+#                 return [seen[target - num], i]
+#             seen[num] = i
