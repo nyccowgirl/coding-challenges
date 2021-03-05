@@ -34,38 +34,39 @@ not have leading zeros.
 
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * struct ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
  */
 
 class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode l3 = new ListNode((l1.val + l2.val) % 10);
-        ListNode current = l3;
-        int carryover = (l1.val + l2.val) / 10;
-        l1 = l1.next;
-        l2 = l2.next;
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* l3 = new ListNode((l1->val + l2->val) % 10);
+        ListNode* current = l3;
+        int carryover = (l1->val + l2->val) / 10;
+        l1 = l1->next;
+        l2 = l2->next;
         
-        while ((l1 != null) || (l2 != null) || (carryover > 0)) {
-            int sum = ((l1 != null) ? l1.val : 0) + ((l2 != null) ? l2.val : 0) + carryover;
-            current.next = new ListNode(sum % 10);
+        while (l1 || l2 || (carryover > 0)) {
+            int sum = (l1 ? l1->val : 0) + (l2 ? l2->val : 0) + carryover;
+            current->next = new ListNode(sum % 10);
             carryover = sum / 10;
             
-            current = current.next;
-            if (l1 != null) {
-                l1 = l1.next;
+            current = current->next;
+            if (l1) {
+                l1 = l1->next;
             }
             
-            if (l2 != null) {
-                l2 = l2.next;
+            if (l2) {
+                l2 = l2->next;
             }
         }
         
         return l3;
     }
-}
+};
