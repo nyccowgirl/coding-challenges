@@ -55,19 +55,15 @@ class Solution:
         
         return head.next
         
-#         # Option 2 - recursive (longer runtime):
+#         # Option 2 - recursive:
 #         # if it is not the end of either linked list
 #         if l1 and l2:
-#             # if value of current node in l1 is larger than the one
-#             # in l2, swap them
-#             if l1.val > l2.val:
-#                 l1, l2 = l2, l1
-            
-#             # set pointer to next node of the smaller value
-#             l1.next = self.mergeTwoLists(l1.next, l2)
-            
-#             # return node of the smaller value
-#             return l1
+#             # return the smaller of the two nodes and continue traversing to
+#             # next node in the respective list
+#             if l1.val < l2.val:
+#                 return ListNode(l1.val, self.mergeTwoLists(l1.next, l2))
+#             else:
+#                 return ListNode(l2.val, self.mergeTwoLists(l1, l2.next))
         
 #         # return remaining list which has not reached the end
 #         return l1 or l2
